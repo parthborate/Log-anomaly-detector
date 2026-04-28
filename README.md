@@ -232,7 +232,3 @@ For each flagged anomaly, `explainer.py` builds a 20-line context window (10 lin
 MIT — do whatever you want with it. Attribution appreciated but not required.
 
 ---
-
-<div align="center">
-  <sub>Week 1, Project 2 — DevOps + AI Portfolio Series · Built with $0, runs on $0</sub>
-</div>
