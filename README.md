@@ -8,6 +8,7 @@
 - **Local LLM (Ollama)** reads the surrounding context of each flagged line and explains it in plain English — what happened, why it probably happened, and what to do next
 - **Fully local and free** — no API keys, no cloud, no bills. Your log data never leaves your machine. Total cost: $0.00
 
+
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.x-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
 ![Ollama](https://img.shields.io/badge/Ollama-Local_LLM-black?style=flat-square)
