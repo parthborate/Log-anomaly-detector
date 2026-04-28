@@ -1,27 +1,12 @@
 # 🔍 AI-Assisted Log Anomaly Detector
 
-*Hybrid anomaly detection**
-- Uses two methods together instead of relying on just one
-- Detection + explanation working as a pipeline
+## What This Project Does
 
-**Classical ML — Isolation Forest**
-- A proven algorithm from 2008, still used in production AIOps today
-- Scans all 2,000 log lines and flags the ones that are statistically unusual
-- Works without any labelled data — no need to tell it what "bad" looks like beforehand
-- Fast, lightweight, runs entirely in Python on your laptop
+**Hybrid anomaly detection** — two methods working together as a pipeline, not just one.
 
-**LLM-powered root cause analysis**
-- Once a line is flagged, an AI reads the surrounding log context
-- Answers three questions: what happened, why it probably happened, what to do next
-- Turns a raw flagged row into plain-English actionable insight
-- Uses Ollama — the LLM runs locally on your machine, not in the cloud
-
-**Free, local tooling**
-- No API keys required
-- No cloud compute, no subscriptions, no bills
-- Your log data never leaves your machine
-- Works completely offline once the model is downloaded
-- Total cost: $0.00
+- **Isolation Forest** scans every log line and flags the ones that are statistically unusual — no labelled data needed, no need to tell it what "bad" looks like beforehand
+- **Local LLM (Ollama)** reads the surrounding context of each flagged line and explains it in plain English — what happened, why it probably happened, and what to do next
+- **Fully local and free** — no API keys, no cloud, no bills. Your log data never leaves your machine. Total cost: $0.00
 
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.x-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
