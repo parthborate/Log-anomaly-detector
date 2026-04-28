@@ -1,13 +1,27 @@
 # 🔍 AI-Assisted Log Anomaly Detector
 
-> Hybrid anomaly detection
-means the project uses two different methods working together, not just one. Hybrid = combination of approaches.
->classical ML (Isolation Forest)"
-is the first method. Isolation Forest is a machine learning algorithm from 2008 that finds unusual data points by trying to mathematically isolate them from the rest. It's called "classical" because it predates the deep learning / LLM era — it's fast, proven, and still widely used in production today. It handles the detection part: scanning 2,000 log lines and flagging the ones that look statistically weird.
->LLM-powered root cause analysis
-is the second method. Once Isolation Forest flags a suspicious log line, a Large Language Model (the same kind of AI behind ChatGPT) reads the surrounding lines and answers in plain English: what went wrong, why it probably happened, and what command an engineer should run to investigate. It handles the explanation part — turning a flagged row into actionable insight.
->built entirely on free, local tooling
-means no cloud, no API bills, no data sent anywhere. Isolation Forest runs in Python on your laptop. The LLM runs through Ollama, which downloads the model to your machine and runs it there. Everything stays local, costs $0, and works offline.
+*Hybrid anomaly detection**
+- Uses two methods together instead of relying on just one
+- Detection + explanation working as a pipeline
+
+**Classical ML — Isolation Forest**
+- A proven algorithm from 2008, still used in production AIOps today
+- Scans all 2,000 log lines and flags the ones that are statistically unusual
+- Works without any labelled data — no need to tell it what "bad" looks like beforehand
+- Fast, lightweight, runs entirely in Python on your laptop
+
+**LLM-powered root cause analysis**
+- Once a line is flagged, an AI reads the surrounding log context
+- Answers three questions: what happened, why it probably happened, what to do next
+- Turns a raw flagged row into plain-English actionable insight
+- Uses Ollama — the LLM runs locally on your machine, not in the cloud
+
+**Free, local tooling**
+- No API keys required
+- No cloud compute, no subscriptions, no bills
+- Your log data never leaves your machine
+- Works completely offline once the model is downloaded
+- Total cost: $0.00
 
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.x-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
